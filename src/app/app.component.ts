@@ -4,10 +4,13 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet],  // No need to import RouterModule here
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']  // Corrected from styleUrl to styleUrls
 })
 export class AppComponent {
-  title = 'flight-tracker';
+  logClick() {
+    console.log('Link clicked');
+  }
+  title = 'Flight Tracker';
 }

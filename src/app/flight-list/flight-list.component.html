@@ -1,0 +1,17 @@
+<div>
+  <h2>Flight List</h2>
+
+  <!-- Show loading spinner or message while data is being fetched -->
+  <p *ngIf="loading">Loading flights...</p>
+
+  <!-- Once loading is complete, display the flight list -->
+  <ul *ngIf="!loading">
+    <li *ngFor="let flight of flights">
+      Flight Callsign: {{ flight.callsign }} - Country: {{ flight.origin_country }} -
+      Altitude: {{ flight.altitude }} ft - Lat: {{ flight.latitude }} - Lon: {{ flight.longitude }}
+    </li>
+  </ul>
+
+  <!-- Handle case where no flights are returned -->
+  <p *ngIf="!loading && flights.length === 0">No flights found.</p>
+</div>

@@ -1,0 +1,18 @@
+/* src/app/flight-list/flight-list.component.css */
+h2 {
+    color: #2980B9; /* Bright blue */
+    font-size: 24px;
+  }
+  
+  ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  li {
+    background: #ECF0F1; /* Light gray */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  

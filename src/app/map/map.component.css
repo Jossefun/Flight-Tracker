@@ -1,0 +1,43 @@
+/* src/app/map/map.component.css */
+h2 {
+    color: #074722; /* Green */
+    font-size: 24px;
+  }
+  
+  nav {
+    background-color: #34495E; /* Darker gray for the nav bar */
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+  }
+  
+  nav a.active-link {
+    font-weight: bold; /* Highlight the active link */
+  }
+
+  #map {
+    height: 135%;  /* Adjust the height if needed */
+    width: 100%;
+    position: relative;
+    display: block; /* Ensure it's a block element to prevent collapse */
+    border: 1px solid #ccc; /* Optional: just for debugging the size */
+  }
+  
+  /* Optionally, ensure the parent container of #map has height too */
+  .map-container {
+    height: 400px; /* or whatever height you need for the map container */
+    width: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
