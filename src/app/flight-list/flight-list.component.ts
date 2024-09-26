@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FlightService } from '../flight.service';
 import { CommonModule } from '@angular/common'; // Import CommonModule
-import { FlightResponse, FlightState } from './flight-response.model';
+import { FlightState } from './flight-response.model';
 import { RouterModule } from '@angular/router';
 
 
@@ -23,8 +23,9 @@ export class FlightListComponent implements OnInit {
   //It is used for initializing component-level variables and injecting dependencies.
   constructor(private flightService: FlightService){}
 
-  ngOnInit(): void {
-  /* subscribe(): Observables in Angular need to be "subscribed" to in order to receive data from them. 
+  ngOnInit(): void {   //initialize when component is mounting
+  
+    /* subscribe(): Observables in Angular need to be "subscribed" to in order to receive data from them. 
     The subscribe() method takes two callbacks:
     1.The first callback is triggered when data is successfully received.
     2.The second callback handles errors.  */
@@ -41,6 +42,9 @@ export class FlightListComponent implements OnInit {
             longitude: state[5] || 0,             // Mapping index 5 to 'longitude'
             altitude: state[7] || 0               // Mapping index 7 to 'altitude'
           }));
+
+          this.flightService.updateFlights(this.flights); // updates the FlightService with the latest flight data, triggering any subscribers (e.g., MapComponent) to receive the new data.
+          console.log("flightService.updateFlights: ", this.flights )
           this.loading = false;  // Stop loading spinner after fetching data
         }
       },

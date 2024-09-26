@@ -24,7 +24,7 @@ h2 {
   }
 
   #map {
-    height: 135%;  /* Adjust the height if needed */
+    height: 120%;  /* Adjust the height if needed */
     width: 100%;
     position: relative;
     display: block; /* Ensure it's a block element to prevent collapse */

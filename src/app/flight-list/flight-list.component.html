@@ -7,8 +7,8 @@
   <!-- Once loading is complete, display the flight list -->
   <ul *ngIf="!loading">
     <li *ngFor="let flight of flights">
-      Flight Callsign: {{ flight.callsign }} - Country: {{ flight.origin_country }} -
-      Altitude: {{ flight.altitude }} ft - Lat: {{ flight.latitude }} - Lon: {{ flight.longitude }}
+      Flight AirLine: {{ flight.callsign }}  >> Origin Country: {{ flight.origin_country }}  >>
+      Altitude: {{ flight.altitude }} ft   >>  Lat: {{ flight.latitude }} - Arrival Location: {{ flight.longitude }}
     </li>
   </ul>
 
